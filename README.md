@@ -142,15 +142,79 @@ Must support multiaccess, shared medium
 Relieved of some link access details by MAC layer
 
 # 3. Network Layer - Data Transfer
+
+# 4. IP Addressing
 ## Class of IP
 Classful Addressing
 
-| Class | Starting Range | Ending Range |
------------------------------------------
-|
+| Class   | Starting Range | Ending Range    |
+|---------|----------------|-----------------|
+| Class A | 0.0.0.0        | 127.255.255.255 |
+| Class B | 128.0.0.0      | 191.255.255.255 |
+| Class C | 192.0.0.0      | 223.255.255.255 |
+| Class D | 224.0.0.0      | 239.255.255.255 |
+| Class E | 240.0.0.0      | 255.255.255.255 |
 
-# 4. IP Addressing
+## Type of IP Address
+1. Private IP address (Used for LAN)
+2. Public IP address (Used for WAN / Internet)
+3. NAT (Translate a Private IP Address to a Public IP Address)
+4. Devices (Router is device that connects two network, Modem (modulator-demodulator) is device that translate one type of signal to other type of signal (fiber optic from ISP to home router))
 
+## Address Mask
+IP Address of device 167.199.170.82 with subnet mask 255.255.255.0 or 167.199.170.82/24
+
+Find:
+
+a. Network Address
+
+b. Broadcast Address
+
+c. Number of IP for this group
+
+Answer:
+
+a. Network Address 
+|             |               |                                            |
+|-------------|---------------|--------------------------------------------|
+| IP Address  | 167.199.170.82| 1010 0111.1100 0111.1010 1010.0101 0010    |
+
+|             |               |                                            |
+|-------------|---------------|--------------------------------------------|
+| Subnet Mask | 255.255.255.0 | 1111 1111.1111 1111.1111 1111.0000 0000    | 
+
+AND OPERATION
+
+Network Address 167.199.170.0  1010 0111.1100 0111.1010 1010.0000 0000
+
+b. Broadcast Address 
+
+IP Address          167.199.170.82 1010 0111.1100 0111.1010 1010.0101 0010
+
+Inverse Subnet Mask 255.255.255.0  0000 0000.0000 0000.0000 0000.1111 1111 OR OPERATION
+
+Broadcast Address   167.199.170.0  1010 0111.1100 0111.1010 1010.1111 1111
+
+c. Number of IP in the group
+
+2 ^ 8 = 256
+
+## Uses of IP Addressing
+Netwowrk addressing is used for routing packet to its desitnation network
+
+# 5. Subnetting
+Designing subnetting 
+
+The subnetwork in a network should be carefully designed to enable the routing of packets. We assume the total number of addresses granted to the organization is N, the prefix length is n, the assigned number of addresses to each subnet is Nsub, and the prefix length of each subnetwork is nsub
+
+Then the following steps need to be carefully followed to guarantee the proper operation of the subnetwork
+1. The number of addresses in each subnetwork should be the power of 2
+2. The prefix length of each subnetwork should be found using the formula: nsub = 32 - log2Nsub
+3. The starting address in each subnetwork should be divisible by the number of addresses in that subnetwork. This can be achieved if we first assign addresses to larger subnetwork
+
+Example:
+
+An organization is granted a block of addresses with the beginning address 14.24.74.0/24. the organization needs to have three subblocks of addresses to use in its three subnets: One subblock of 10 addresses, one subblock of 60 addresses, and one subblock of 120 addresses. design the subblock
 
 
 
