@@ -83,6 +83,7 @@ OSI model is a layered framework for the design of network systems that allows c
 
 # 2. Physical & Data Link
 ## Transmission Media
+### Classification of Transmission Media
 1. Bounded/Guided Media
    - Copper cables such as twisted pair and coaxial cable
    - Optical cable
@@ -93,8 +94,36 @@ OSI model is a layered framework for the design of network systems that allows c
 2. Unbounded/Unguided
    - Electromagnetic Wave (VHF, UHF, Microwave)
 
-## Transmission characteristic
+### Transmission characteristic
+- Characteristic and data transmission is determined by the medium used and signal quality
+- Data transmission using guided media, the medium itself determines the bandwidth of the communication channel capacity
+- Data transmission using electromagnetic waves the bandwidth antenna is important
+- Key performance is the transmission data rate and covered distance
 
+## Link Layer Addressing
+### Media Access Control (MAC)
+Shared-media broadcast technology
+
+Ethernet's MAC performs three function
+1. Transmitting and receiving data packets
+2. Decoding data packets and checking them for valid addresses before passing them into the upper layers
+3. Detecting errors within data packets or on the network
+
+Use Contention Transmission Principle (First Come, First Serve)
+
+Dictates who can transmit and when (Only one station may transmit at a time, otherwise, their signals would be scrambled)
+
+Assembly of data into frame with address and error detection fields
+
+Disassembly of frame
+- address recognition
+- error recognition
+
+Govern access to transmission medium which is not found in traditional layer 2 data link control
+
+For the same LLC, several MAC options may be available
+
+  
 
 
 
