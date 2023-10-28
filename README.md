@@ -123,7 +123,40 @@ Govern access to transmission medium which is not found in traditional layer 2 d
 
 For the same LLC, several MAC options may be available
 
-  
+### Ethernet
+Most popular LAN standards
+
+Simple and relatively inexpensive
+
+Scalable - 10 Mbps, 100 Mbps, 1 Gbps
+
+### Logical Link Control (LLC)
+Interface to higher-level
+
+Flow and error control
+
+Transmission of link-level PDUs between two stations
+
+Must support multiaccess, shared medium
+
+Relieved of some link access details by MAC layer
+
+# 3. Network Layer - Data Transfer
+## Class of IP
+Classful Addressing
+
+| Class | Starting Range | Ending Range |
+-----------------------------------------
+|
+
+# 4. IP Addressing
+
+
+
+
+
+
+
 
 
 
