@@ -143,6 +143,8 @@ Relieved of some link access details by MAC layer
 
 # 3. Network Layer - Data Transfer
 
+
+
 # 4. IP Addressing
 ## Class of IP
 Classful Addressing
@@ -158,49 +160,28 @@ Classful Addressing
 ## Type of IP Address
 1. Private IP address (Used for LAN)
 2. Public IP address (Used for WAN / Internet)
-3. NAT (Translate a Private IP Address to a Public IP Address)
-4. Devices (Router is device that connects two network, Modem (modulator-demodulator) is device that translate one type of signal to other type of signal (fiber optic from ISP to home router))
-
-## Address Mask
-IP Address of device 167.199.170.82 with subnet mask 255.255.255.0 or 167.199.170.82/24
-
-Find:
-
-a. Network Address
-
-b. Broadcast Address
-
-c. Number of IP for this group
-
-Answer:
-
-a. Network Address 
-|             |               |                                            |
-|-------------|---------------|--------------------------------------------|
-| IP Address  | 167.199.170.82| 1010 0111.1100 0111.1010 1010.0101 0010    |
-
-|             |               |                                            |
-|-------------|---------------|--------------------------------------------|
-| Subnet Mask | 255.255.255.0 | 1111 1111.1111 1111.1111 1111.0000 0000    | 
-
-AND OPERATION
-
-Network Address 167.199.170.0  1010 0111.1100 0111.1010 1010.0000 0000
-
-b. Broadcast Address 
-
-IP Address          167.199.170.82 1010 0111.1100 0111.1010 1010.0101 0010
-
-Inverse Subnet Mask 255.255.255.0  0000 0000.0000 0000.0000 0000.1111 1111 OR OPERATION
-
-Broadcast Address   167.199.170.0  1010 0111.1100 0111.1010 1010.1111 1111
-
-c. Number of IP in the group
-
-2 ^ 8 = 256
+3. NAT (Translate a Private IP Address to a Public IP Address, typically implemented in routers)
+4. Devices (Router is a device that connects two networks, Modem (modulator-demodulator) is a device that translates one type of signal to another type of signal (fiber optic from ISP to home router))
 
 ## Uses of IP Addressing
-Netwowrk addressing is used for routing packet to its desitnation network
+### Network Address
+Network addressing is used for routing packets to its destination network
+
+Source IP: 167.199.170.82/24 - Calculated Network Address: 167.199.170.0
+
+Source IP: 167.199.179.82/24 - Calculated Network Address: 167.199.179.0
+
+Network Address source is different from Network Address destination, to forward packet from source to destination, we will use Router
+
+Router will forward packet to other network addresses using Routing Table (Forwarding Table) via interface number
+
+### Broadcast Address
+
+Broadcasting means one-to-all communication. A frame with a destination broadcast address is sent to all entities in the link
+
+The broadcast address is always the highest number possible in a network or sub-network or sub-network
+
+Some protocols used broadcast addresses to send frane to all entities like ARP, RIP, etc
 
 # 5. Subnetting
 Designing subnetting 
@@ -215,6 +196,49 @@ Then the following steps need to be carefully followed to guarantee the proper o
 Example:
 
 An organization is granted a block of addresses with the beginning address 14.24.74.0/24. the organization needs to have three subblocks of addresses to use in its three subnets: One subblock of 10 addresses, one subblock of 60 addresses, and one subblock of 120 addresses. design the subblock
+
+# 6. Cloud Computing
+## Definition
+What is cloud computing?
+
+Cloud computing is the on-demand delivery of IT resources over the Internet with pay-as-you-go pricing
+
+Instead of buying, owning, and maintaining physical data centers and servers, you can access technology services, such as computing power, storage, and databases, on an as-needed basis from a cloud provider such as Amazon Web Service (AWS).
+
+Who is using cloud computing?
+
+Organizations of every type, size, and industry are using the cloud for a wide variety of use cases, such as data backup, disaster recovery, email, virtual desktop, software development and testing, big data analytics, and customer-facing web applications
+
+For example, financial services companies are using the cloud to power real-time fraud detection and prevention, and video game makers are using the cloud to deliver online games to millions of players around the world.
+
+## Benefits of Cloud Computing
+1. Agility
+
+   The cloud gives you access to a broad range of techs so that you can innovate faster and build nearly anything that you can imagine
+2. Elasticity
+
+   With cloud computing, you don't have to over-provision resources upfront to handle peak levels of business activity. Instead, you provision the amount of resources that you actually need
+3. Cost Saving
+
+   The cloud allows you to trade capital expenses (such as data centers and physical servers) for variable expenses, and only pay for it as you use it
+4. Deploy globally in minutes
+   With the cloud, you can expand to new geographic regions and deploy globally in minutes
+
+## Types of Cloud Computing
+1. Infrastructure as a Service (IaaS)
+
+   IaaS contains the basic building blocks for cloud IT. It provides access to networking features, computers, and data storage space.
+2. Platform as a Service (PaaS)
+
+   PaaS removes the need for you to manage underlying infrastructure (usually hardware and operating system), and allows you to focus on the deployment and management of your applications
+
+3. Software as a Service (SaaS)
+
+   SaaS provides you with a complete product that is run and managed by the service provider. In most cases, people referring to SaaS are referring to end-user applications (such as web-based email)
+
+
+
+
 
 
 
